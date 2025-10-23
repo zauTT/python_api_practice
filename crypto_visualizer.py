@@ -5,9 +5,9 @@ data = []
 
 with open("crypto_prices.txt", "r") as file:
     for line in file:
-        # print(f"RAW LINE: {repr(line)}")
+        # print(f"RAW LINE: {reprcl(line)}")
         parts = line.strip().split(" - ")
-        if len(parts) == 2:  # ✅ FIXED
+        if len(parts) == 2:
             date = parts[0]
             btc_part, eth_part = parts[1].split(", ")
             btc = float(btc_part.split(": ")[1])
